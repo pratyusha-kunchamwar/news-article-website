@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()"class="comapany-logo">
+                <img src="logo.jpg" alt="company logo" height="80px">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hoverlinks navitems  " id="ipl" onclick="onNavitemclick('ipl')">IPL</li>
+                    <li class="hoverlinks navitems " id="Finance" onclick="onNavitemclick('Finance')">Finance</li>
+                    <li class="hoverlinks navitems " id="politics" onclick="onNavitemclick('politics')">politics</li>
+                </ul>
+            </div>
+            <div class="serch-bar flex">
+                <input type="text" id="serch-text" class="news-input" placeholder="eg:science">
+                <button class="serch-buttion" id="serch-buttion">serch</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="card-container container flex" id="cards-container">
+
+        </div>
+    </main>
+    <!-- we are colleing api -->
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-titile">This is the Title</h3>
+                <h6 class="news-sourse" id="news-sourse">End Gaget 26/08/2023</h6>
+                <p class="news-decs" id="news-decs"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                    maiores consectetur, debitis eveniet eum unde! Fugiat dolorum nisi illo non commodi quasi, odio
+                    neque hic. Corrupti assumenda obcaecati cumque asperiores?</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
